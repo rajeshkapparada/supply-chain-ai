@@ -1,0 +1,25 @@
+.page { max-width: 1100px; margin: 40px auto; padding: 0 16px; font-family: system-ui; }
+.muted { color: #666; }
+.card { margin-top: 16px; padding: 16px; border: 1px solid #ddd; border-radius: 12px; }
+.label { display: block; margin-bottom: 8px; font-weight: 600; }
+.btn { margin-top: 12px; padding: 10px 14px; border-radius: 10px; border: 1px solid #111; background: #111; color: #fff; cursor: pointer; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.ok { margin-top: 10px; color: #0a7a2f; }
+.error { margin-top: 10px; color: #b00020; }
+
+.kpiGrid { margin-top: 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.kpiCard { padding: 14px; border: 1px solid #eee; border-radius: 12px; background: #fafafa; }
+.kpiTitle { font-size: 12px; color: #666; }
+.kpiValue { font-size: 22px; font-weight: 700; margin-top: 6px; }
+
+.h2 { margin: 0 0 10px 0; font-size: 18px; }
+.list { margin: 0; padding-left: 18px; }
+
+.tableWrap { margin-top: 16px; border: 1px solid #eee; border-radius: 12px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+thead th { background: #fafafa; }
+
+@media (max-width: 900px) {
+  .kpiGrid { grid-template-columns: repeat(2, 1fr); }
+}

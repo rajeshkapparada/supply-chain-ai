@@ -1,0 +1,132 @@
+:root {
+  --ink: #1d2430;
+  --muted: #5f6b7a;
+  --panel: rgba(255, 255, 255, 0.84);
+  --line: rgba(17, 24, 39, 0.09);
+  --accent-a: #2f6f9f;
+  --accent-b: #3f8f6b;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  background:
+    radial-gradient(1200px 800px at 0% 0%, rgba(47, 111, 159, 0.16), transparent 50%),
+    radial-gradient(900px 600px at 100% 10%, rgba(63, 143, 107, 0.12), transparent 55%),
+    linear-gradient(180deg, #f7fbff 0%, #f0f6f9 100%);
+}
+
+.sidebar {
+  padding: 20px;
+  border-right: 1px solid var(--line);
+  background: rgba(249, 252, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.menu-label {
+  font-size: 11px;
+  color: #7c899a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 14px 0 10px;
+}
+
+.menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.menu-item {
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.menu-item-active {
+  border-color: rgba(47, 111, 159, 0.35);
+  box-shadow: 0 10px 25px rgba(47, 111, 159, 0.14);
+}
+
+.menu-item-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.menu-item-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.main-area {
+  padding: 20px;
+}
+
+.topbar {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel);
+  padding: 14px 16px;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
+}
+
+.topbar-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.topbar-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.page-content {
+  margin-top: 14px;
+}
+
+@media (max-width: 980px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+}
