@@ -4,3 +4,4 @@ backend/__pycache__/
 backend/supplychain.db
 frontend/node_modules/
 frontend/dist/
+backend/data/supplychain.db
